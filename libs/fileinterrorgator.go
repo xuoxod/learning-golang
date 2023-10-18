@@ -2,6 +2,7 @@ package libs
 
 import (
 	"os"
+	"path"
 )
 
 func PathExists(filepath string) (map[string]interface{}, bool) {
@@ -18,6 +19,10 @@ func PathExists(filepath string) (map[string]interface{}, bool) {
 	fileInfo["size"] = fi.Size()
 	fileInfo["source"] = fi.Sys()
 	fileInfo["isdir"] = fi.IsDir()
+	fileInfo["extension"] = path.Ext(filepath)
+	fileInfo["base"] = path.Base(filepath)
+	fileInfo["parent"] = path.Dir(filepath)
+	fileInfo["isabs"] = path.IsAbs(filepath)
 
 	return fileInfo, true
 }

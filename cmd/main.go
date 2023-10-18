@@ -22,6 +22,16 @@ func main() {
 		fmt.Println("Size:\t", fileInfo["size"])
 		fmt.Println("Source:\t", fileInfo["source"])
 		fmt.Println("Is Dir:\t", fileInfo["isdir"])
+		isDir := fileInfo["isdir"]
+
+		if isDir == false {
+			if fileInfo["extension"] != "" {
+				fmt.Println("Extension:\t", fileInfo["extension"])
+			}
+			fmt.Println("Base:\t", fileInfo["base"])
+			fmt.Println("Parent:\t", fileInfo["parent"])
+			fmt.Println("Absolute:\t", fileInfo["isabs"])
+		}
 
 		list := libs.ReadFileToList(*filepath)
 
