@@ -1,6 +1,6 @@
 ## Learning Golang
 
-##### **Recently I started learning Golang** and this project is for reference.
+##### **Recently I started learning Golang** and so this project is for reference.
 
 ```
 > Golang reference project
