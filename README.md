@@ -2,8 +2,6 @@
 
 ##### **Recently I started learning Golang** and this project is for reference.
 
-#### GO web application with template system
-
 ```
 > Golang reference project
 
