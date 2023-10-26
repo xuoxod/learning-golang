@@ -6,7 +6,7 @@ import (
 )
 
 // createDirIfNotExist creates a directory if it does not exist
-func createDirIfNotExist(path string) error {
+func CreateDirIfNotExist(path string) error {
 	const mode = 0755
 	if _, err := os.Stat(path); os.IsNotExist(err) {
 		err := os.Mkdir(path, mode)
