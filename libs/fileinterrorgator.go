@@ -10,6 +10,7 @@ func PathExists(filepath string) (map[string]interface{}, bool) {
 	fi, err := os.Stat(filepath)
 
 	if err != nil {
+		log.Printf("os.stat error:\t%s\n", err.Error())
 		return nil, false
 	}
 
