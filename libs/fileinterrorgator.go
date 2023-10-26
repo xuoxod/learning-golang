@@ -1,6 +1,7 @@
 package libs
 
 import (
+	"log"
 	"os"
 	"path"
 )
@@ -31,6 +32,7 @@ func PathIsFile(filepath string) bool {
 	fi, err := os.Stat(filepath)
 
 	if err != nil {
+		log.Printf("os.stat error:\t%s\n", err.Error())
 		return false
 	}
 
@@ -41,6 +43,7 @@ func PathIsDir(filepath string) bool {
 	fi, err := os.Stat(filepath)
 
 	if err != nil {
+		log.Printf("os.stat error:\t%s\n", err.Error())
 		return false
 	}
 

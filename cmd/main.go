@@ -9,10 +9,10 @@ import (
 )
 
 func main() {
-	testPathExists()
+
 }
 
-func testPathExists() {
+func TestPathExists() {
 	filepath := flag.String("path", "./test.txt", "Expects a file path string")
 	flag.Parse()
 
